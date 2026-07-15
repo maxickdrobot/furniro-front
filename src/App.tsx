@@ -1,9 +1,11 @@
+import { RouterProvider } from 'react-router';
 import './App.scss';
+import { router } from './routes';
 
 function App() {
   return (
     <>
-      <h1>Furniro</h1>
+      <RouterProvider router={router} />
     </>
   );
 }
