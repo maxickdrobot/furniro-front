@@ -1,0 +1,20 @@
+.link {
+  display: flex;
+  align-items: center;
+  font-family: "Montserrat";
+  font-weight: 700;
+}
+
+.icon {
+  position: relative;
+  width: 50px;
+  margin-right: 5px;
+
+  svg {
+    width: 100%;
+  }
+}
+
+.label {
+  font-size: 32px;
+}

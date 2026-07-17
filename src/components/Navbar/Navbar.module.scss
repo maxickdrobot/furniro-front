@@ -1,0 +1,38 @@
+@use "/src/styles/functions.scss" as funcs;
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 835px;
+  gap: 30px;
+}
+
+.navmenu,
+.navActions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navmenuItem {
+  margin-right: 75px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.navmenuLink {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.navActionsItem {
+  margin-right: 45px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
