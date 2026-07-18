@@ -10,7 +10,7 @@ const Logo = ({ variant = 'primary' }: LogoProps) => {
         {variant === 'primary' && (
           <>
             <div className={styles.icon}>
-              <LogoIcon className={styles.icon} />
+              <LogoIcon />
             </div>
             <span className={styles.label}>Furniro</span>
           </>

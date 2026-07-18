@@ -1,5 +1,3 @@
-@use "/src/styles/functions.scss" as funcs;
-
 .navbar {
   display: flex;
   align-items: center;
@@ -16,12 +14,8 @@
   flex-wrap: wrap;
 }
 
-.navmenuItem {
-  margin-right: 75px;
-
-  &:last-child {
-    margin-right: 0;
-  }
+.navmenu {
+  gap: 75px;
 }
 
 .navmenuLink {
@@ -29,10 +23,6 @@
   font-weight: 500;
 }
 
-.navActionsItem {
-  margin-right: 45px;
-
-  &:last-child {
-    margin-right: 0;
-  }
+.navActions {
+  gap: 45px;
 }
