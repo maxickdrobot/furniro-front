@@ -6,4 +6,17 @@
 
 .main {
   flex: 1 1 auto;
+  margin-top: 108px;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    margin-top: 98px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-top: 76px;
+  }
 }

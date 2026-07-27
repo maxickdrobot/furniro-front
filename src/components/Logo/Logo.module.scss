@@ -18,3 +18,13 @@
 .label {
   font-size: 32px;
 }
+
+@media (max-width: 1024px) {
+  .icon {
+    width: 35px;
+  }
+
+  .label {
+    font-size: 24px;
+  }
+}
