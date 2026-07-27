@@ -1,0 +1,16 @@
+.button {
+  padding: 0;
+}
+
+.icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+
+  svg {
+    width: 100%;
+  }
+}

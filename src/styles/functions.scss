@@ -1,0 +1,5 @@
+@use "sass:math";
+
+@function adaptive-pixels($container-width, $block-width) {
+  @return math.div($block-width, $container-width) * 100%;
+}

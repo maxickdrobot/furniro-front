@@ -1,0 +1,75 @@
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 999;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  max-width: 1286px;
+  padding: 30px 0;
+  gap: 45px;
+}
+
+.burgerBtn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 0;
+  }
+
+  .burgerBtn {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 20px;
+
+    &::before,
+    &::after,
+    span {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #000;
+      transition: all 0.5s ease 0s;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    span {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &.open {
+      &::before {
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+      }
+
+      &::after {
+        bottom: 50%;
+        transform: translateY(50%) rotate(-45deg);
+      }
+
+      span {
+        transform: translateY(-50%) rotate(45deg);
+      }
+    }
+  }
+}
