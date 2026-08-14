@@ -2,8 +2,14 @@ import { NavLink } from 'react-router';
 import styles from './Footer.module.scss';
 import clsx from 'clsx';
 import Input from '../Input/Input';
+import type { SubmitEvent } from 'react';
 
 const Footer = () => {
+  const handleSubmit = (event: SubmitEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log('Success');
+  };
+
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -15,7 +21,7 @@ const Footer = () => {
             </address>
           </section>
           <nav className={styles.navbar}>
-            <section className={styles.column}>
+            <div className={styles.column}>
               <h2 className={styles.columnTitle}>Links</h2>
               <ul className={styles.links}>
                 <li className={styles.link}>
@@ -31,8 +37,8 @@ const Footer = () => {
                   <NavLink to='/contact'>Contact</NavLink>
                 </li>
               </ul>
-            </section>
-            <section className={styles.column}>
+            </div>
+            <div className={styles.column}>
               <h2 className={styles.columnTitle}>Help</h2>
               <ul className={styles.links}>
                 <li className={styles.link}>
@@ -45,20 +51,20 @@ const Footer = () => {
                   <NavLink to='/privacy-policies'>Privacy Policies</NavLink>
                 </li>
               </ul>
-            </section>
-            <section className={styles.newsletter}>
+            </div>
+            <div className={styles.newsletter}>
               <h2 className={clsx(styles.newsletterTitle, styles.columnTitle)}>Newsletter</h2>
-              <form action=''>
+              <form onSubmit={handleSubmit}>
                 <div className={styles.emailInput}>
                   <Input type='email' variant='secondary' placeholder='Enter Your Email Address' />
                   <Input type='submit' variant='secondary' value='Subscribe' />
                 </div>
               </form>
-            </section>
+            </div>
           </nav>
         </div>
         <div className={styles.copyright}>
-          <p>2023 Furniro. All rights reverved</p>
+          <p>{new Date().getFullYear()} Furniro. All rights reverved</p>
         </div>
       </div>
     </footer>
