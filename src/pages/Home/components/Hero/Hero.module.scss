@@ -1,7 +1,8 @@
 .hero {
-  padding: 153px 0 120px;
+  display: flex;
+  justify-content: center;
   max-height: 716px;
-  background: url("/src/assets/images/hero-bg.jpg") center / cover no-repeat;
+  background: url("/src/assets/images/hero-bg.jpg") center 70% / cover no-repeat;
 }
 
 .container {
@@ -9,7 +10,7 @@
   justify-content: end;
   width: 95%;
   max-width: 1320px;
-  margin: 0 auto;
+  padding: 153px 0 120px;
 }
 
 .info {
@@ -44,7 +45,7 @@
 
 @media (max-width:768px) {
 
-  .hero {
+  .container {
     padding: 100px 0 80px;
   }
 
@@ -63,7 +64,7 @@
 }
 
 @media (max-width:425px) {
-  .hero {
+  .container {
     padding: 50px 0 40px;
   }
 
