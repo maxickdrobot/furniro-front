@@ -1,10 +1,9 @@
-import styles from './Header.module.scss';
 import Logo from '../Logo/Logo';
 import Navbar from '../Navbar/Navbar';
 import Button from '../Button/Button';
 import { useRef, useState } from 'react';
 import clsx from 'clsx';
-
+import styles from './Header.module.scss';
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const burgerBtnRef = useRef<HTMLButtonElement | null>(null);
@@ -20,6 +19,7 @@ const Header = () => {
         <Navbar isOpen={isOpen} setIsOpen={setIsOpen} burgerBtnRef={burgerBtnRef} />
         <Button
           className={clsx(styles.burgerBtn, isOpen && styles.open)}
+          variant='icon'
           onClick={handleToggleMenu}
           ref={burgerBtnRef}
         >

@@ -2,9 +2,6 @@ import { useRef } from 'react';
 import { NavLink } from 'react-router';
 import clsx from 'clsx';
 
-import styles from './Navbar.module.scss';
-import type { NavbarProps } from './Navbar.types';
-
 import useOnClickOutside from '@/hooks/useOnClickOutside';
 import Button from '../Button/Button';
 
@@ -12,6 +9,8 @@ import AccountAlertOutlineIcon from '@/assets/icons/account-alert-outline.svg?re
 import SearchIcon from '@/assets/icons/search.svg?react';
 import HeartIcon from '@/assets/icons/heart.svg?react';
 import ShopingCartOutlineIcon from '@/assets/icons/shopping-cart-outline.svg?react';
+import styles from './Navbar.module.scss';
+import type { NavbarProps } from './Navbar.types';
 
 const Navbar = ({ isOpen, setIsOpen, burgerBtnRef }: NavbarProps) => {
   const navbarRef = useRef<HTMLElement>(null);
@@ -28,7 +27,7 @@ const Navbar = ({ isOpen, setIsOpen, burgerBtnRef }: NavbarProps) => {
 
   return (
     <nav ref={navbarRef} className={clsx(styles.navbar, isOpen && styles.open)}>
-      <Button className={styles.navClose} onClick={handleCloseMenu}></Button>
+      <Button className={styles.navClose} variant='icon' onClick={handleCloseMenu}></Button>
       <ul className={styles.navmenu}>
         <li className={styles.navmenuItem}>
           <NavLink to='/' className={styles.navmenuLink} onClick={handleCloseMenu}>

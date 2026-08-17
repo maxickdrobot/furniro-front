@@ -1,7 +1,12 @@
+import Hero from './components/Hero/Hero';
 import styles from './Home.module.scss';
 
 const Home = () => {
-  return <h1>Home</h1>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
 export default Home;
