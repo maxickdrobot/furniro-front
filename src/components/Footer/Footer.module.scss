@@ -1,4 +1,5 @@
 @use "@/styles/functions" as func;
+@use "@/styles/variables" as var;
 
 .footer {
   display: flex;
@@ -24,7 +25,7 @@
 
 .columnTitle {
   margin-bottom: 55px;
-  color: #9F9F9F;
+  color: var.$secondary-text-color;
 }
 
 .newsletter {
@@ -46,7 +47,7 @@
 .address {
   min-width: 285px;
   font-weight: normal;
-  color: #9F9F9F;
+  color: var.$secondary-text-color;
 }
 
 .navbar {
@@ -69,6 +70,11 @@
   display: flex;
   justify-content: space-between;
   gap: 10px;
+  font-size: .875rem;
+
+  &::placeholder {
+    color: var.$secondary-text-color;
+  }
 }
 
 .copyright {

@@ -1,10 +1,12 @@
+@use "@/styles/variables" as var;
+
 .button {
   padding: 12px 33px;
 }
 
 .primary {
-  background-color: #B88E2F;
-  color: white;
+  background-color: var.$accent-color;
+  color: var.$light-color;
 }
 
 .icon {
