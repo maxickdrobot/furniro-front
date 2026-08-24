@@ -1,3 +1,5 @@
+@use "@/styles/variables" as var;
+
 .input {
   background-color: transparent;
 
@@ -7,7 +9,7 @@
     font-size: 14px;
     font-weight: 400;
     border: none;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var.$dark-color;
 
     &[type="email"] {
       width: 100%;

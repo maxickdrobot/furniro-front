@@ -1,7 +1,16 @@
+import Browse from './components/Browse/Browse';
+import Hero from './components/Hero/Hero';
+import Products from './components/Products/Products';
 import styles from './Home.module.scss';
 
 const Home = () => {
-  return <h1>Home</h1>;
+  return (
+    <>
+      <Hero />
+      <Browse />
+      <Products />
+    </>
+  );
 };
 
 export default Home;
