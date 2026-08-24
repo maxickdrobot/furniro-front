@@ -1,0 +1,133 @@
+@use "@/styles/variables" as var;
+
+.card {
+  position: relative;
+  background-color: var.$secondary-bg-color;
+  overflow: hidden;
+
+  &:hover {
+    .overlay {
+      top: 0;
+    }
+  }
+}
+
+.picture {
+  width: 100%;
+  aspect-ratio: 26/30;
+  object-fit: cover;
+}
+
+.banners {
+  position: absolute;
+  display: flex;
+  gap: 24px;
+  right: 24px;
+  top: 24px;
+}
+
+.discountBanner,
+.isNewBaner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: var.$light-color;
+}
+
+.discountBanner {
+  background-color: var.$discount-accent-color;
+}
+
+.isNewBaner {
+  background-color: var.$new-accent-color;
+}
+
+.info {
+  padding: 16px 16px 30px;
+}
+
+.name {
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+  line-height: 1.2em;
+  font-weight: 600;
+}
+
+.description {
+  margin-bottom: 8px;
+  line-height: 1.5em;
+  color: var.$benefits-text-color;
+}
+
+.prices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 1.25rem;
+  line-height: 1.5em;
+  font-weight: 600;
+}
+
+.oldPrice {
+  line-height: 1.5em;
+  text-decoration: line-through;
+  color: var.$light-gray-color;
+}
+
+.overlay {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(58, 58, 58, 0.72);
+  pointer-events: none;
+  transition: all var.$transition-time ease 0s;
+
+  button {
+    pointer-events: auto;
+  }
+
+}
+
+.addToCartBtn {
+  padding: 12px 55px;
+  margin-bottom: 24px;
+}
+
+.productActions {
+  display: flex;
+  gap: 20px;
+
+}
+
+.actionBtn {
+  color: var.$light-color;
+}
+
+.icon {
+  width: 16px;
+}
+
+
+@media (max-width: 1440px) {
+  .price {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .info {
+    padding: 8px 8px 15px;
+  }
+}
